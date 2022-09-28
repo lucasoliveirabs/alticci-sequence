@@ -8,7 +8,7 @@
 		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.alticci</groupId>
+	<groupId>com.altice</groupId>
 	<artifactId>alticci-sequence</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>alticci-sequence</name>
