@@ -14,4 +14,8 @@ public class AlticciSequenceDto {
 	public void setAlticciSequenceIndex(Long pAlticciSequenceIndex) {
 		this.alticciSequenceIndex = pAlticciSequenceIndex;
 	}
+	
+	public boolean isAlticciSequenceIndexValid(Long pAlticciSequenceIndex) {
+		return (pAlticciSequenceIndex >= 0);
+	}
 }
