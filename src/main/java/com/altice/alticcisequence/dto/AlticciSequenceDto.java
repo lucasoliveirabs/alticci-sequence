@@ -1,13 +1,17 @@
 package com.altice.alticcisequence.dto;
 
-import javax.validation.constraints.Min;
+import org.springframework.stereotype.Component;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter @Setter
+@Component
 public class AlticciSequenceDto {
 
-	@Min(value = 0, message = "The input value must be zero or a natural number")
-	private Long alticciSequenceValue;
+	private Long alticciSequenceIndex;
+
+	public Long getAlticciSequenceIndex() {
+		return this.alticciSequenceIndex;
+	}
+	
+	public void setAlticciSequenceIndex(Long pAlticciSequenceIndex) {
+		this.alticciSequenceIndex = pAlticciSequenceIndex;
+	}
 }
