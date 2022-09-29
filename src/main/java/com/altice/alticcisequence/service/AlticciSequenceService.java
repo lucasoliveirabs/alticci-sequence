@@ -6,8 +6,7 @@ import com.altice.alticcisequence.exceptions.InvalidAlticciSequenceIndexExceptio
 
 @Service
 public class AlticciSequenceService {
-
-	public long getAlticciSequenceValue(Long inputValue) throws Exception {
+	public long getAlticciSequenceValue(Long inputValue) throws InvalidAlticciSequenceIndexException {
 
 		if (inputValue < 0) {
 			throw new InvalidAlticciSequenceIndexException();

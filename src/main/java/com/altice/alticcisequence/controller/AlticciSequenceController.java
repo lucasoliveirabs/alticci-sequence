@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.altice.alticcisequence.dto.AlticciSequenceDto;
+import com.altice.alticcisequence.exceptions.InvalidAlticciSequenceIndexException;
 import com.altice.alticcisequence.service.AlticciSequenceService;
 
 @RestController
@@ -26,7 +27,7 @@ public class AlticciSequenceController {
 		try {
 			return ResponseEntity.status(HttpStatus.OK).body(
 					this.alticciSequenceService.getAlticciSequenceValue(alticciSequenceDto.getAlticciSequenceIndex()));
-		} catch (Exception e) {
+		} catch (InvalidAlticciSequenceIndexException e) {
 			return ResponseEntity.status(HttpStatus.FORBIDDEN).body("The input value must be zero or a natural number.");
 		}
 	}
