@@ -28,7 +28,7 @@ public class AlticciSequenceController {
 
 		if(this.alticciSequenceDto.isAlticciSequenceIndexValid(n)){
 			this.alticciSequenceDto.setAlticciSequenceIndex(n);
-			return ResponseEntity.status(HttpStatus.OK).cacheControl(CacheControl.maxAge(100, TimeUnit.SECONDS)).body(
+			return ResponseEntity.status(HttpStatus.OK).cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS)).body(
 					this.alticciSequenceService.getAlticciSequenceValue(alticciSequenceDto.getAlticciSequenceIndex()));
 		} else {
 			return ResponseEntity.status(HttpStatus.FORBIDDEN).body("The input value must be zero or a natural number.");
