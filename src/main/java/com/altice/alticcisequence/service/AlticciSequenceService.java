@@ -20,6 +20,7 @@ public class AlticciSequenceService {
 		} else {
 			long alticciSequenceValue = this.getAlticciSequenceValue(inputValue - 3)
 					+ this.getAlticciSequenceValue(inputValue - 2);
+			System.out.println("Put into cache: inputValue = "+inputValue);
 			this.alticciSequenceCache.put(inputValue, alticciSequenceValue);
 			return alticciSequenceValue;
 		}
